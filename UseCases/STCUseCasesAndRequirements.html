@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- 
+  Licensed under the Apache License, Version 2.0 (the "License"); 
+  you may not use this file except in compliance with the License. 
+  You may obtain  a copy of the License at 
+  
+  http://www.apache.org/licenses/LICENSE-2.0 Unless 
+  
+  required by applicable law or agreed to in writing, software 
+  distributed under the License is distributed on an "AS IS" 
+  BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+  express or implied. See the License for the specific language 
+  governing permissions and limitations under the License. 
+-->
+<html lang="en" dir="ltr" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta lang="" property="dc:language" content="en">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Semantic Technologies Group Ontology Testbed Use Cases &amp; Requirements</title>
+  <script src='/usr/local/respec/builds/respec-w3c-common.js' async class='remove'></script> <!-- http://home.apache.org/~lewismc/respec/builds/respec-w3c-common.js -->
+  <style type="text/css">
+  .contributor:before {
+    content: "Contributed by: ";
+    font-weight: bold;
+  }
+  .relatedDeliverables:before {
+    content: "Related deliverables: ";
+    font-weight: bold;
+  }
+  .relatedRequirements:before {
+    content: "Related requirements: ";
+    font-weight: bold;
+  }
+  .relatedUseCases:before {
+    content: "Related use cases: ";
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+  .toggleVis {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .expandOrCollapse {
+    font-weight: bold;
+  }
+  </style> 
+  <script type="text/javascript">
+    // This is the script that hides/shows the full descriptions of the use cases
+    // The default is visible so that they're accessible without scripting
+    // Init makes them all hidden and writes in the toggle link
+
+    window.onload = init;
+
+    function init() {
+      var divs = document.getElementsByTagName("div");
+      for (var i = 0; i < divs.length; i++ ) {
+        if (divs[i+1].className=='visible') {
+          divs[i+1].className = 'hidden';
+          divs[i].innerHTML = '&#9654; Full use case description (click to expand):';
+  
+        }
+      }
+    }
+
+    // And here's the toggle function
+
+    function toggleVisibility(elem) { // expand or collapse the next div
+      var divs = document.getElementsByTagName("div");
+      for(var i = 0; i < divs.length;i++) // find the next div element
+        if(divs[i] == elem) {
+          var item = divs[i + 1];
+        }
+      if (item) {
+        if (item.className=='hidden') {
+          item.className = 'visible';
+          elem.innerHTML = '&#9650; Full use case description (click to collapse):';
+        } else {
+          item.className = 'hidden';
+          elem.innerHTML = '&#9654; Full use case description (click to expand):';
+        }
+      }
+    }
+  </script>
+  <script class='remove'>
+    var respecConfig = {
+      specStatus: "ED",
+      shortName: "esip-stc-ucr",
+      publishDate:  "2016-08-01",
+      previousPublishDate: "2016-08-01",
+      previousMaturity: "NOTE",
+      previousURI: "",
+      edDraftURI: "http://esipfed.github.io/stc/UseCases/STCUseCasesAndRequirements.html",
+      // lcEnd: "3000-01-01",
+      // crEnd: "3000-01-01",
+      editors: [
+      {
+        name: "Lewis John McGibbney",
+        company: "NASA JPL",
+        companyURL: "http://www.jpl.nasa.gov/"
+      }],
+      wg: "Semantic Technologies Committee",
+      wgURI: "http://wiki.esipfed.org/index.php/Semantic_Technologies",
+      wgPublicList: "esip-semanticweb",
+      wgPatentURI: "",
+      inlineCSS: true,
+      issueBase: "https://www.github.com/esipfed/stc/issues/",
+      noIDLIn: true,
+      noLegacyStyle: false,
+      logos: [
+      {
+        src: "http://www.esipfed.org/sites/default/files/esip-logo.png",
+        alt: "ESIP",
+        height: "48",
+        width: "72",
+        url: "http://www.esipfed.org/"
+      }
+      ],
+      otherLinks: [{
+      key: "Repository",
+        data: [{
+          value: "We are on GitHub",
+          href: "https://github.com/esipfed/stc"
+            }]
+      }, {
+      key: "Changes",
+        data: [{
+          value: "Change log",
+          href: "#ChangeHistory"
+        }, {
+          value: "Commit history",
+           href: "https://github.com/esipfed/stc/commits/gh-pages"
+       }]
+      
+    }],
+      noRecTrack: true,
+      overrideCopyright: "<p>Copyright © 2016 ESIP Federation ® ESIP Federation liability, trademark and document use rules apply.</p>"
+    };
+  </script>
+
+  <body>
+  
+    <section id='abstract'>
+      <p>
+        This document describes use cases that describe community requirements for the storage, access, governance, long term preservation and availability of Semantic Web resources via a Community Ontology Repository (COR). Artifacts to be stored within the COR includes ontologies, vocabularies, etc. It underpins the collaborative work of the 
+        <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">Semantic Technologies Committee (STC)</a> as operated by the <a href="http://esipfed.org/">ESIP Federation</a>. 
+      </p>
+    </section>
+    <section id="sotd">
+        <p>This specification is an update to [[PointerEvents]] which was shipped broadly only by Microsoft Internet Explorer and Microsoft Edge (though a further independent and mostly interoperable implementation was present in a pre-release build of Mozilla Firefox when the Pointer Events specification was published as a W3C Recommendation). Level 2 includes editorial clarifications, new features and minor breaking changes that address certain limitations and concerns that have been raised about aspects of the design, in an effort to enable wider browser adoption.</p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        The mission of the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">STC</a>, as described in the committee <a href="">charter</a>, is to .... In particular:</p>
+        <ol>
+        <li>to determine how spatial information can best be integrated with other data on the Web;</li>
+        <li>to determine how machines and people can discover that different facts in different datasets relate to the same place, especially when 'place' is expressed in different ways and at different levels of granularity;</li>
+        <li>to identify and assess existing methods and tools and then create a set of best practices for their use;</li>
+        <li>where desirable, to complete the standardization of informal technologies already in widespread use.</li>
+        </ol>
+        <p>This document describes the results of the first steps of working towards these goals. Members of the working group and other stakeholders have come up with a number of <a href="#UseCases">use cases</a> that describe how spatial data on the Web could work. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the working group.</p>
+      <p>The requirements described in this document will be the basis for the evaluation of a suitable Ontology Portal for use by the ESIP Semantic Technologies community.</p>
+    </section>
+
+    <section id="Deliverables">
+      <h2>Deliverables</h2>
+      <p>The deliverables of this Working Group are described in the <a href="http://www.w3.org/2015/spatial/charter">Working Group Charter</a>. For convenience those deliverables are replicated in this chapter. The charter remains the authoritative source of the definition of deliverables.</p>
+      <section id="UseCasesAndRequirements">
+        <h3>Use Cases and Requirements</h3>
+        <p>A document setting out the range of problems that the working groups are trying to solve (this document).</p>
+      </section>
+      <section id="COR">
+        <h3>Community Ontology Repository (COR) Evaluation</h3>
+        <p>The STC will undertake testing and evaluation to support ESIP's evaluation of semantic repository solutions in particular providing insight into:
+          <ol>
+            <li>what current and future ESIP Semantic Technologies Committee (STC) community requirements (CR) are,</li>
+            <li>a comparative evaluation of different technology stacks/approaches; with the aim of assessing different solutions based upon how well they satisfy the Use Cases and Requirements as defined within this document, and</li>
+            <li>a business cost justification model that could be used to justify funding semantic web technology stacks within ESIP.</li>
+          </ol> 
+        All ESIP members (and anyone else with an interest in a COR hosted at ESIP) are encouraged to contribute Use Cases and Requirements as described in this document.</p>
+      </section>
+      <section id="SWEET">
+        <h3>Semantic Web for Earth and Environmental Terminology (SWEET) Vocabulary</h3>
+        <p>The STC will work within NASA JPL to ensure transition of the SWEET Ontology from NASA JPL to ESIP where the STC will take community ownership of the resource. Within the scope of this deliverable the STC will address issues surrounding:
+        <ol>
+          <li>hosting SWEET on the ESIP Community Ontology Repository (COR),</li>
+          <li>source code management including the definition of a community development and contribution process,</li>
+          <li>selecting a suitable open source licensing for SWEET,</li>
+          <li>establishing a public community mailing list where stakeholders and interested individuals/groups can follow development,</li>
+          <li>community development including building the community for the long term sustainability of SWEET as the prima ontological resource within the earth and planatery sciences, and</li> <li>defining and documenting a release management procedure ensuring that new contributions and developments are made available through formal public open source releases.</li>
+        </ol>
+        </p>
+      </section>
+    </section>
+
+    <section id="Methodology">
+      <h2>Methodology</h2>
+      <p>In order to find out the requirements for the deliverables of the Working Group, use cases were collected. For the purpose of the Working Group, a use case is a story that describes challenges with respect to spatial data on the Web for existing or envisaged information systems. It does not  need to adhere to certain standardised format. Use cases are primarily used as a source of requirements, but a use case could be revisited near the time the work of the Working Group will reach completion, to demonstrate that it is now possible to make the use case work.</p> 
+      <p>The Working Group has derived requirements from the collected use cases. A requirement is something that needs to be achieved by one or more deliverables and is phrased as a specification of functionality. Requirements can lead to one or more tests that can prove whether the requirement is met.</p>
+      <p>Care was taken to only derive requirements that are considered to in scope for the further work of the Working Group. The scope of the Working Group is determined by the <a href="http://www.w3.org/2015/spatial/charter">charter</a>. To help keeping the requirements in scope, the following questions were applied:</p>
+      <ol>
+      <li>Is the requirement specifically about spatial data on the Web?</li>
+      <li>Is the use case including data published, reused, and accessible via Web technologies?</li>
+      <li>Has a use case a description that can lead to a testable requirement?</li>
+      </ol>
+    </section>
+
+    <section id="UseCases">
+      <!--A HTML template for use cases can be found at the end of this section -->
+      <h2>Use Cases</h2>
+        <p>Use cases that describe current problems or future opportunities for the use of Semantic Web resources within the ESIP community have been gathered by the STC. They were mainly contributed by members of STC, but there were also contributions from other interested parties. In this chapter these use cases are listed and identified. Each use case is related to one or more STC <a href="#Deliverables">deliverables</a> and to one or more <a href="#Requirements">requirements</a> for future deliverables.</p>
+        <section id="SemanticSearchEngine">
+          <h3>Use of Semantics within Search Engines</h3>
+          <p class="contributor">Lewis John McGibbney, NASA JPL</p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+          <p>The ability to use defined terminology dervied from domain vocabularly has the potential to improve certain types of information retreival tasks. As an example one can imagine a user engaging in a typical search scenario where a query is entered into a search engine interface and a ranked list of results are returned for the query. Domain semantics through use of terms and vocabulary can be utilized to augment/refine the users query with the aim of retreiving more relevant content for the user query.</p>
+          </div>
+          <p class="relatedDeliverables"><a href="#SWEET"></a></p>
+          <p class="relatedRequirements"><a href="#SpatialMetadata"></a>, </p>
+        </section>
+        <!-- Template for use cases
+        <section id="">
+          <h3></h3>
+          <p class="contributor"></p>
+          <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+          <div class="visible">
+            <p></p>
+          </div>
+          <p class="relatedDeliverables"><a href="#BestPractices"></a>, <a href="#TimeOntologyInOWL"></a>, <a href="#SSN"></a>, <a href="#CoverageInLinkedData"></a></p>
+          <p class="relatedRequirements"></p>
+        </section>
+        -->
+      </section>
+      <br>
+      <section id="Requirements">
+      <h2>Requirements</h2>
+      <p>This chapter lists the requirements for the deliverables of the Working Group, in alphabetical order.</p>
+        <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended  way should have, or who should make the recommendation. A recommended way could be a formal recommendation or standard from an authoritative standards body like the OGC or W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
+      <section id="4DModelSpaceTime">
+        <h3>4D model of space-time</h3>
+        <p>It should be possible to represent spatial extent directly bound to time, e.g. journey trajectories.</p>
+        <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
+        <p class="relatedUseCases"><a href="#EventlikeGeographicFeatures"></a>, <a href="#PublicationOfRawSubsurfaceMonitoringData"></a></p>
+      </section> 
+      <!-- Template for requirements:
+       <section id="">
+        <h3></h3>
+        <p></p>
+        <p class="relatedDeliverables"><a href=""></a>, <a href=""></a></p>
+        <p class="relatedUseCases"><a href=""></a>, <a href=""></a></p>
+      </section>
+      -->
+      <!-- Template for issues:
+       <div class="issue" data-number="XX">
+          <p>This requirement needs clarification.</p>
+       </div>
+      --> 
+    </section>
+    <section id="RequirementsByDeliverable">
+      <h2>Requirements by deliverable</h2>
+      <p>For convenience, this chapter lists requirements grouped by Working Group deliverable.</p>
+<!--      <div id="table1"></div> -->
+    </section>
+    <section id="ack">
+      <h2>Acknowledgements</h2>
+      <p>The editors are grateful for all contributions made to this document, in particular the contributors of the use cases and the all the members of the STC that helped with deriving and formulating requirements.</p>
+<!--      <p>Copyright © 2015 by <a href="http://www.dfki.de/web/forschung/asr">DFKI</a> for examples in <a href="#IncorporatingGeospatialDataIntoInteractive3DGraphicsOnTheWeb">
+Incorporating geospatial data into interactive 3D graphics on the Web</a>. The <a href="http://opensource.org/licenses/MIT">MIT License</a> applies.</p> -->
+    </section>
+    <section id="ChangeHistory">
+      <h2>Appendix A: History of changes</h2>
+      <section id="FPWD-SPWD">
+        <h3>Changes between the First Public Working Draft and Second Public Working Draft</h3>
+        <p>A summary of the main changes between the <a href="http://www.w3.org/TR/2015/NOTE-sdw-ucr-20150723/">First Public Working Draft</a> (published 2015-07-23) and the Second Public Working Draft (this version) of this document:</p>
+        <ul>
+        <li>A note was added to the description of the deliverable <a href="#CoverageInLinkedData">Coverage In Linked Data</a>.</li>
+        <li>Two new use cases were added: <a href="#ProvenanceOfClimateData">Provenance of climate data</a> and <a href="#smod">Representing geospatial data in RDF</a>.</li>
+        <li>A note was added to the <a href ="#Requirements">section listing requirements</a>, to explain the term 'recommedend way'.</li>
+        <li>The <a href="#Provenance">Provenance requirement</a> was rephrased.</li>
+        <li>The <a href="#ValidTime">Valid time requirement</a> was rephrased.</li>
+        <li>The requirement 'Spatial meronymy' was renamed to <a href="#SpatialRelationships">Spatial relationships</a> and redefined.</li>
+        <li>A new requirement for the deliverable <a href="#TimeOntologyInOWL">Time Ontology in OWL</a> was added: <a href="#UpdateDatatypes">Update datatypes in OWL Time</a>.</li>
+        <li>A new section was added that lists <a href="#RequirementsByDeliverable">requirements by deliverable</a>.</li>
+        <li>A new section listing <a href="https://www.w3.org/TR/2015/NOTE-sdw-ucr-20151217#DeferredRequirements">deferred requirements</a> was added.</li>
+      </section>
+      <section id="SPWD-TPWD">
+        <h3>Changes between the Second Public Working Draft and Third Public Working Draft</h3>
+        <p>A summary of the main changes between the <a href="https://www.w3.org/TR/2015/NOTE-sdw-ucr-20151217">Second Public Working Draft</a> (published 2015-12-17) and the Third Public Working Draft (this version) of this document:</p>
+        <ul>
+        </ul>
+      </section>
+    </section>
+    <script class='remove'> 
+      <!-- Create a list of deliverables with related requirements. -->
+      var tab = document.getElementById("RequirementsByDeliverable");
+      var deliverables = document.getElementById("Deliverables").getElementsByTagName("section");
+      var requirements = document.getElementById("Requirements").getElementsByTagName("section");
+      var relatedDelivs = [];
+      var dId, rId, dLabel, rLabel, dp, dpb, dpbt1, dpbt2, dpba, dbpat, dpo, dpol, dpola, dpolat;
+      for (i = 0; i < deliverables.length; i++) {
+        dId = deliverables[i].id;
+        if (dId == "UseCasesAndRequirements") {continue;}
+        dLabel = deliverables[i].getElementsByTagName("h3")[0].innerText;
+        dp = document.createElement("section");
+        dp.id = 'ar'+dId ;
+        dpb = document.createElement("h3");
+        dpbt1 = document.createTextNode("Requirements for deliverable ");
+        dpb.appendChild(dpbt1);
+        dpba = document.createElement("a");
+        dpbat = document.createTextNode(dLabel);
+        dpba.appendChild(dpbat);
+        dpba.href = "#" + dId;
+        dpb.appendChild(dpba);
+        dp.appendChild(dpb);
+        dpo = document.createElement("ol");
+        for (j = 0; j < requirements.length; j++) {
+          rId = requirements[j].id;
+          rLabel = requirements[j].getElementsByTagName("h3")[0].innerText;
+          relatedDelivs = requirements[j].getElementsByClassName("relatedDeliverables")[0].getElementsByTagName("a");
+          for (k = 0; k < relatedDelivs.length; k++) {
+            if (relatedDelivs[k].getAttribute("href") == "#" + dId) {
+              dpol = document.createElement("li");
+              dpola = document.createElement("a");
+              dpolat = document.createTextNode(rLabel);
+              dpola.appendChild(dpolat);
+              dpola.href = "#" + rId;
+              dpol.appendChild(dpola);
+              dpo.appendChild(dpol);           
+            }
+          }
+        }
+        dp.appendChild(dpo);
+        tab.appendChild(dp);
+      }
+    </script>
+  </body>
+</html>
