@@ -8,7 +8,7 @@
 
 # How to work with us on Github
 The following is a recommended ESIP STC Github workflow for collaborative document drafting:
- 1. create a local copy of the W3C SDW repo ```git clone https://github.com/esipfed/stc.git```
+ 1. create a local copy of the ESIPfed STC repo ```git clone https://github.com/esipfed/stc.git```
  2. configure remotes on local - specify the ESIPfed STC repo remote as 'upstream': ```git remote add upstream https://github.com/esipfed/stc.git```
  3. fetch the branches and their respective commits from the upstream repository: ```git fetch upstream```
  4. because we're using [GitHub Pages](https://pages.github.com/) for publication, `gh-pages` is our main branch
