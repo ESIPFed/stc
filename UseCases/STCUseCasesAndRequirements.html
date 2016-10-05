@@ -17,7 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta lang="" property="dc:language" content="en">
     <meta content="width=device-width,initial-scale=1" name="viewport">
-    <title>Semantic Technologies Group Semantic Ontology Implementation (SRI) Use Cases &amp; Requirements</title>
+    <title>Semantic Technologies Group Semantic Repository Implementation (SRI) Use Cases &amp; Requirements (UCR)</title>
     <script src='//home.apache.org/~lewismc/respec/builds/respec-w3c-common.js' async class='remove'></script>
     <style type="text/css">
       .contributor:before {
@@ -145,36 +145,38 @@
   <body>
     <section id='abstract'>
       <p>
-        This document describes use cases that describe community requirements for the storage, access, governance, long term preservation and availability of Semantic Web resources via a Semantic Repository Implementation (SRI). Artifacts to be stored within the SRI includes ontologies, vocabularies, etc. It underpins the collaborative work of the 
+        This document describes use cases that describe community Use Cases and Requirements (UCR) for the storage, access, governance, long term preservation and availability of Semantic Web resources via a Semantic Repository Implementation (SRI) potentially hosted by ESIP. Artifacts to be stored within the SRI include ontologies, vocabularies, linked data resources, etc. which are of value to the Earth Science community. This document underpins the collaborative work of the 
         <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">Semantic Technologies Committee (STC)</a> as operated by the <a href="http://esipfed.org/">ESIP Federation</a>. 
       </p>
     </section>
     <section id="sotd">
-      <p>This specification is an update to [[PointerEvents]] which was shipped broadly only by Microsoft Internet Explorer and Microsoft Edge (though a further independent and mostly interoperable implementation was present in a pre-release build of Mozilla Firefox when the Pointer Events specification was published as a W3C Recommendation). Level 2 includes editorial clarifications, new features and minor breaking changes that address certain limitations and concerns that have been raised about aspects of the design, in an effort to enable wider browser adoption.</p>
+      <p>This UCR document represents the first unified, collaborative effort by ESIP semantic technologists (and fellow stakeholders) on what current and future SRI expectations and requirements actually are. This being said, best efforts have been made to fully recognize any previous similar efforts on this front. The STC aims to engage and collaborate with external parties, on behalf of ESIP, in regards to semantic technologies. It can therefore be assumed that due to ongoing collaborations this document will be revised and updated as necessary. It's state should be considered dynamic.</p>
     </section>
     <section>
       <h2>Introduction</h2>
       <p>
-        The mission of the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">STC</a>, as described in the committee <a href="">charter</a>, is to .... In particular:
+        The mission of the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">STC</a>, as described in our <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies#Vision_of_the_Semantic_Technologies_Committee">Vision of the Semantic Technologies Committee</a>, is to .... In particular:
       </p>
       <ol>
-        <li>to determine how spatial information can best be integrated with other data on the Web;</li>
-        <li>to determine how machines and people can discover that different facts in different datasets relate to the same place, especially when 'place' is expressed in different ways and at different levels of granularity;</li>
-        <li>to identify and assess existing methods and tools and then create a set of best practices for their use;</li>
-        <li>where desirable, to complete the standardization of informal technologies already in widespread use.</li>
+        <li>promote research and development of semantic technologies in support of Earth science data discovery, dissemination, and analysis;</li>
+        <li>collaborate with ESIP members, working groups, clusters, and standing committees on semantic related topics;</li>
+        <li>foster sharing and reuse of ontologies and controlled vocabularies;</li>
+        <li>to provide a collaborative environment for the development of ontologies and ontology-based standards;</li>
+        <li>to maintain a long-term agenda and roadmap for evaluation of semantic technologies within ESIP; and</li>
+        <li>to collaborate with external agencies, on behalf of ESIP, in regards to semantic technologies.</li>
       </ol>
-      <p>This document describes the results of the first steps of working towards these goals. Members of the working group and other stakeholders have come up with a number of <a href="#UseCases">use cases</a> that describe how spatial data on the Web could work. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the working group.</p>
-      <p>The requirements described in this document will be the basis for the evaluation of a suitable Ontology Portal for use by the ESIP Semantic Technologies community.</p>
+      <p>This document describes first steps of working towards these goals specifically focused on the SRI topic. Members of the working group and other stakeholders have come up with a number of <a href="#UseCases">use cases</a> that aim to represent a voice for semantic technologists within the Earth Science community. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the working group.</p>
+      <p>The requirements described in this document will be the basis for the evaluation of a suitable SRI for use by the ESIP Semantic Technologies community and hopefully further afield.</p>
     </section>
     <section id="Deliverables">
       <h2>Deliverables</h2>
-      <p>The deliverables of this Working Group are described in the <a href="http://www.w3.org/2015/spatial/charter">Working Group Charter</a>. For convenience those deliverables are replicated in this chapter. The charter remains the authoritative source of the definition of deliverables.</p>
+      <p>The deliverables of STC are tangible outcomes aligned with the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies#2015-2020_Strategic_Plan_Goals">2015-2020 Strategic Plan Goals</a>. For convenience those deliverables are replicated in this chapter. The charter remains the authoritative source of the definition of deliverables.</p>
       <section id="UseCasesAndRequirements">
-        <h3>Use Cases and Requirements</h3>
-        <p>A document setting out the range of problems that the working groups are trying to solve (this document).</p>
+        <h3>Development of Semantic Repository Implementation Use Cases and Requirements</h3>
+        <p>A document setting out the range of community problems and issues that the STC is trying to solve (<i>this document</i>).</p>
       </section>
       <section id="SRI">
-        <h3>Semantic Repository Implementation (SRI) Evaluation</h3>
+        <h3>Evaluation of Semantic Repository Implementation Platform(s)</h3>
         <p>The STC will undertake testing and evaluation to support ESIP's evaluation of semantic repository solutions in particular providing insight into:</p>
         <ol>
           <li>what current and future ESIP Semantic Technologies Committee (STC) community requirements (CR) are,</li>
@@ -184,7 +186,7 @@
         <p><b>All ESIP members (and anyone else with an interest in a SRI hosted at ESIP) are encouraged to contribute Use Cases and Requirements as described in this document</b>.</p>
       </section>
       <section id="SWEET">
-        <h3>Semantic Web for Earth and Environmental Terminology (SWEET) Vocabulary</h3>
+        <h3>Development of a Community Governance Model for the Semantic Web for Earth and Environmental Terminology (SWEET) Vocabulary</h3>
         <p>The STC will work within NASA JPL to ensure transition of the SWEET Ontology from NASA JPL to ESIP where the STC will take community ownership of the resource. Within the scope of this deliverable the STC will address issues surrounding:</p>
         <ol>
           <li>hosting SWEET in the ESIP SRI,</li>
