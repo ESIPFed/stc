@@ -215,10 +215,24 @@
       <p>Use cases that describe current problems or future opportunities for the use of Semantic Web resources within the ESIP community have been gathered by the STC. They were mainly contributed by members of STC, but there were also contributions from other interested parties. In this chapter these use cases are listed and identified. Each use case is related to one or more STC <a href="#Deliverables">deliverables</a> and to one or more <a href="#Requirements">requirements</a> for future deliverables.</p>
       <section id="SemanticSearchEngine">
         <h3>Use of Semantics within Search Engines</h3>
-        <p class="contributor">Lewis John McGibbney, NASA JPL</p>
+        <p class="contributor">Lewis John McGibbney, NASA JPL, Beth Huffer (Lingua Logica)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
           <p>The ability to use defined terminology dervied from domain vocabularly has the potential to improve certain types of information retreival tasks. As an example one can imagine a user engaging in a typical search scenario where a query is entered into a search engine interface and a ranked list of results are returned for the query. Domain semantics through use of terms and vocabulary can be utilized to augment/refine the users query with the aim of retreiving more relevant content for the user query.</p>
+          <p><b>User profile:</b> A software developer engaged in the development of search tools for the Earth science community. Assume the developer is not familiar with semantics or ontologies.</p>
+          <p><b>Scenario:</b> In order to improve the relevancy of search results, the developer of the ACME Earth Science Search Service develops a capability whereby ACME finds standard terms for the search term entered by the ACME user and uses those standard terms to augment the user’s own search term.</p>
+          <p><b>Workflow:</b></p>
+          <ol>
+            <li>A user enters a search term into the ACME search service.</li>
+            <li>ACME calls the ESIP Ontology portal and finds standard terms that have the same meaning as the term entered by the user.</li>
+            <li>The ESIP Ontology Portal sends back one or more terms (from one or more ontologies?) matching the ACME user’s input.</li>
+          </ol>
+          <p><b>Requirements implied by this use case:</b></p>
+          <ol>
+            <li>The ontology portal has an api via which the ACME system can submit the term to be matched.</li>
+            <li>The ontology portal can semantically match terms received as input to terms in the ontologies stored there.</li>
+            <li>The ontology portal can return a set of matching terms to the requesting application.</li>
+          </ol>
         </div>
         <p class="relatedDeliverables"><a href="#SWEET"></a></p>
         <p class="relatedRequirements"><a href="#SpatialMetadata"></a>, </p>
