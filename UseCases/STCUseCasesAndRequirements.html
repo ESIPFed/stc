@@ -225,14 +225,26 @@
       </section>
       <section id="OntologyBrowsing">
         <h3>Browsing a Portal for a Relevant Ontology</h3>
-        <p class="contributor">Line Pouchard (Purdue University) and Michael Huhns (University of South Carolina)</p>
+        <p class="contributor">Line Pouchard (Purdue University), Beth Huffer (Lingua Logica), and Michael Huhns (University of South Carolina)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
-          <p>Suppose an earth scientist is gathering data about the properties of seawater, such as salinity and parts-per-million of manganese, and decides to record the values in a database. What should the scientist choose for the name of the table and the names of its columns? An appropriate ontology provides a standard vocabulary that relates the database to the data recorded by other scientists.</p>
-          <ul>
-            <li>The scientist should be able to browse existing ontologies at a portal to find ones relevant to the scientist’s needs. </li>
-            <li>The scientist should be able to search the portal for concepts of interest. </li>
-          </ul>
+          <p><b>User profile:</b> Dr. Jane Anderson is a researcher investigating marine ecosystems. She is gathering data on properties of sea water. She maintains a personal database on her laptop computer in which she records the values for salinity and parts-per-million of manganese. </p>
+          <p><b>Scenario:</b> Although the data Dr. Anderson is collecting on sea water is initially being recorded in a private database, she hopes later to publish her data, relate it to data collected by other researchers, and publish her results. In order to ensure that her own data can be discovered and that it will be semantically interoperable with that of other researchers, she would like to use standard terms for data elements and their attributes.  She browses the ontology portal to find a standard vocabulary for sea water properties. </p>
+          <p><b>Workflow:</b></p>
+          <ol>
+            <li>Dr. Anderson links to the ontology portal home page.</li>
+            <li>She enters “sea water” into the search dialogue.</li>
+            <li>The ontology portal returns a set of terms that match “sea water”, with links to the ontologies/vocabularies in which they are found.</li>
+            <li>Dr. Anderson selects one of the ontologies.</li>
+            <li>The ontology portal displays information about the term as it is recorded in the selected ontology and displays related terms.</li>
+            <li>Dr. Anderson then continues searching within the selected ontology, or opens a different linked ontology, for additional terms that are appropriate for her database.</li>
+          </ol>
+          <p><b>Requirements implied by this use case:</b></p>
+          <ol>
+            <li>The ontology portal provides the capability of searching across all of the ontologies it stores.</li>
+            <li>There is a user interface and/or api that accepts a search term as input and returns appropriate results.</li>
+            <li>There are links among related concepts within an ontology.</li>
+          </ol>
         </div>
         <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
         <p class="relatedRequirements"></p>
@@ -259,10 +271,33 @@
       </section>
       <section id="AnnotatingText">
         <h3>Annotating Text</h3>
-        <p class="contributor">Line Pouchard (Purdue University) and Michael Huhns (University of South Carolina)</p>
+        <p class="contributor">Line Pouchard (Purdue University), Beth Huffer (Lingua Logica), and Michael Huhns (University of South Carolina)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
-          <p>A portal should provide a means to annotate text by inserting links to ontology concepts into the text.</p>
+          <p><b>User Profile:</b> Roger Brown is a scientist at a prominent University. </p>
+          <p><b>Scenario:</b> He recently completed a study on the relationship between x, y and z. The paper he wrote reporting on the results of his study has been accepted for publication in an online journal. The journal requires authors to provide annotations for technical terms found in the document, so that readers can easily access the definitions of such terms.  The annotations are especially important because many of the terms used in Dr. Brown’s paper have specialized meanings that are peculiar to his area of research and could easily be misinterpreted by researchers in other disciplines or areas of interest. Annotations are also valuable aids for students. </p>
+          <p><b>Workflow:</b></p>
+          <ol>
+            <li>Dr. Brown accesses the ontology portal’s text annotation tool.</li>
+            <li>The annotation tool prompts him to upload a text document or enter text directly.</li>
+            <li>Dr. Brown uploads his document.</li>
+            <li>The annotation tool prompts Dr. Brown to either select one or more particular ontologies to work from, or select all ontologies.</li>
+            <li>Dr. Brown selects some ontologies (or selects all ontologies).</li>
+            <li>The text annotator identifies terms in the uploaded document that match concepts in the selected ontologies.</li>
+            <li>The text annotator returns a list of concepts from the selected ontologies and indicates the term(s) in the text that the ontology concepts matched, along with information about the ontology in which the concept is found.</li>
+            <li>Dr. Brown reviews the concept-term matches suggested by the annotation tool and, for each term matched, he indicates whether or not he wants to annotate it with the suggested ontology concept.</li>
+            <li>The annotation tool inserts hyperlinks to the selected ontology concepts into the text.</li>
+          </ol>
+          <p><b>Requirements implied by this use case:</b></p>
+          <ol>
+            <li>The ontology portal includes an annotation tool.</li>
+            <li>The annotation tool has a UI and/or API that enables users to access the annotation tool.</li>
+            <li>The annotation tool is able to accept text as input either by uploading a document or by entering text directly.</li>
+            <li>The annotation tool is able to identify terms in the text that match ontology concepts.</li>
+            <li>The annotation tool is able to display the extracted terms along with the concepts/ontologies to which they could be mapped.</li>
+            <li>The annotation tool is able to accept input from users accepting or rejecting suggested matches.</li>
+            <li>The annotation tool is able to mark up a text document with appropriate hyperlinks.</li>
+          </ol>
         </div>
         <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
         <p class="relatedRequirements"></p>
