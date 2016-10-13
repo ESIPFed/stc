@@ -263,16 +263,6 @@
         <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
         <p class="relatedRequirements"></p>
       </section>
-      <section id="ExtendingEditingOntology">
-        <h3>Extending and Editing an Existing Ontology</h3>
-        <p class="contributor">Line Pouchard (Purdue University) and Michael Huhns (University of South Carolina)</p>
-        <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
-        <div class="visible">
-          <p>Once an earth scientist has located an ontology in a portal that matches the scientist’s interest, the scientist should be able to add new domain concepts to the ontology and modify existing concepts for improvement or correction. The changed ontology should be stored as a new version and should not simply replace the original version.</p>
-        </div>
-        <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
-        <p class="relatedRequirements"></p>
-      </section>
       <section id="MatchingOntologyConcepts">
         <h3>Matching Concepts among Ontologies</h3>
         <p class="contributor">Line Pouchard (Purdue University) and Michael Huhns (University of South Carolina)</p>
@@ -337,15 +327,61 @@
         <p class="relatedRequirements"></p>
       </section>
       <section id="ReleaseOntology">
-        <h3>Ability to "Release" new versions of an ontology</h3>
-        <p class="contributor">Ruth Duerr</p>
+        <h3>Editing, Extending and Releasing New Versions of an Existing Ontology</h3>
+        <p class="contributor">Ruth Duerr (Ronin Institute), Line Pouchard (Purdue University) and Michael Huhns (University of South Carolina)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
-          <p>In order to act as a working testbed for an ontology, the ontology repository must include the concept of released versions of ontologies and working versions where the advertised and stable URL's point to the lastest release not the latest working copy.</p>
+          <p><b>User Profile:</b> Andrea Carter is an information systems engineer at the Roadrunner Science Technology Corp. Becky Stein is a data scientist whose background is in cryospheric science. Both are well-versed in RDF/OWL, set theory, and first-order logic. </p>
+          <p><b>Scenario:</b> Once an earth scientist has located an ontology in a portal that matches the scientist’s interest, the scientist should be able to add new domain concepts to the ontology and modify existing concepts for improvement or correction. The changed ontology should be stored as a new version and should not simply replace the original version. </p>
+          <p>In order to act as a working testbed for an ontology, the ontology repository must include the concept of released versions of ontologies and working versions where the advertised and stable URL's point to the lastest release not the latest working copy. </p>
+          <p>Specifically related to this Scenario, Ms. Carter has been working with Dr. Stein and other Earth science subject matter experts to develop an ontology in RDF for the Cryosphere. She has recently received approval to publicize the ontology and would like to put it in the ESIP repository, in order to make it available for the broad community of ESIP members. However, Ms. Carter is aware that, just like any code, the ontology is likely to undergo changes as functional and/or technical requirements change, and domain knowledge increases. She and Dr. Stein expect to make periodic changes to the ontology, and hope to encourage other subject matter experts, data scientists, and semantic technology developers to contribute to the ontology. Accordingly, some contributors to the ontology may not be well-versed in RDF/OWL and will want to edit it via a user-friendly interface. Moreover, because changes to the ontology have the potential to cause problems for applications that are using it, it will be necessary to ensure that updates to the ontology are managed under a version control system. </p>
+          <p><b>Workflow:</b></p>
+          <ol>
+            <li>Ms. Carter logs into the ontology portal. </li>
+            <li>She selects the “upload a new ontology” option. </li>
+            <li>She uploads one or more files in one of several rdf encoding formats (e.g., ttl, n-triple) which comprise an ontology of the Cryosphere. </li>
+            <li>The portal logs the date and time that the ontology was uploaded, and its state. </li>
+            <li>After uploading, Ms. Carter views the ontology in a browser that allows her to see the class structure, view properties of classes, view any instances of classes, and view properties and their properties. </li>
+            <li>After verifying that the ontology has been properly uploaded, Ms. Carter “publishes” the ontology, thereby making it available to anyone with access to the portal. She exits the portal. </li>
+            <li>The following week, Dr. Stein logs in to the ontology portal and retrieves the ontology of the Cryosphere uploaded by Andrea Carter. </li>
+            <li>The portal displays the ontology, giving Dr. Stein the opportunity to browse or edit it. </li>
+            <li>Dr. Stein selects the edit ontology option. </li>
+            <li>Dr. Stein makes various changes to the ontology and saves them. </li>
+            <li>The ontology portal records the changes, logs the date and time of the changes and the author of the changes. </li>
+            <li>The portal prompts Dr. Stein to either publish a new version of the ontology or save it as a work in progress. </li>
+            <li>Dr. Stein
+                <ul>
+                    <li>Saves it as work in progress, or </li>
+                    <li>Publishes it as a new version that can be accessed by anyone. </li>
+                </ul>
+            </li>
+            <li>The ontology portal
+                <ul>
+                    <li>Prompts Dr. Stein to log out, or </li>
+                    <li>Prompts Dr. Stein to inidicate whether the previous version of the portal should remain publically available. </li>
+                </ul>
+            </li>
+            <li>Dr. Stein 
+                <ul>
+                    <li>Logs out, or </li>
+                    <li>Indicates the previous version should remain publically available, or </li>
+                    <li>Indicates the previous version should no longer be publically available. </li>
+                </ul>
+            </li>
+          </ol>
+          <p><b>Requirements implied by this use case:</b></p>
+          <ol>
+            <li>There is a user authentication system.</li>
+            <li>A UI and/or API that enables users to upload ontology files (in a variety of formats?)</li>
+            <li>A UI that allows users to view an existing ontology.</li>
+            <li>A UI that allows users to edit an existing ontology.</li>
+            <li>A version control system.</li>
+          </ol>
         </div>
-        <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
-        <p class="relatedRequirements"></p>
+        <p class="relatedDeliverables"><a href="#UseCasesAndRequirements"></a>,<a href="#SRI"></a></p>
+        <p class="relatedRequirements"><a href="#AuthenticationSystem"></a>,<a href="#OntologyUpload"></a>,<a href="#ViewExisting"></a>,<a href="#EditExisting"></a>,<a href="#Versioning"></a></p>
       </section>
+
       <!-- Template for use cases
         <section id="">
           <h3></h3>
@@ -362,13 +398,37 @@
     <br>
     <section id="Requirements">
       <h2>Requirements</h2>
-      <p>This chapter lists the requirements for the deliverables of the Working Group, in alphabetical order.</p>
-      <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended  way should have, or who should make the recommendation. A recommended way could be a formal recommendation or standard from an authoritative standards body like the OGC or W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
-      <section id="4DModelSpaceTime">
-        <h3>4D model of space-time</h3>
-        <p>It should be possible to represent spatial extent directly bound to time, e.g. journey trajectories.</p>
+      <p>This chapter lists the requirements for the deliverables of the STC, in alphabetical order.</p>
+      <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended  way should have, or who should make the recommendation. A recommended way could be a formal or community recommendation or standard from an authoritative body like ESIP, OGC or W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
+      <section id="AuthenticationSystem">
+        <h3>A user authentication system.</h3>
+        <p>There is a user authentication system.</p>
         <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
-        <p class="relatedUseCases"><a href="#EventlikeGeographicFeatures"></a>, <a href="#PublicationOfRawSubsurfaceMonitoringData"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
+      </section>
+      <section id="OntologyUpload">
+        <h3>Ontology Upload Mechanism</h3>
+        <p>A UI and/or API that enables users to upload ontology files (in a variety of formats?)</p>
+        <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
+      </section>
+      <section id="ViewExisting">
+        <h3>UI for Viewing Existing Resources</h3>
+        <p>A UI that allows users to view an existing ontology.</p>
+        <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
+      </section>
+      <section id="EditExisting">
+        <h3>UI for Editing Existing Resources</h3>
+        <p>A UI that allows users to edit an existing ontology.</p>
+        <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
+      </section>
+      <section id="Versioning">
+        <h3>Version Control</h3>
+        <p>A version control system.</p>
+        <p class="relatedDeliverables"><a href="#TimeOntologyInOWL"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
       </section>
       <!-- Template for requirements:
         <section id="">
@@ -386,7 +446,7 @@
     </section>
     <section id="RequirementsByDeliverable">
       <h2>Requirements by deliverable</h2>
-      <p>For convenience, this chapter lists requirements grouped by Working Group deliverable.</p>
+      <p>For convenience, this chapter lists requirements grouped by STC deliverable.</p>
       <!--      <div id="table1"></div> -->
     </section>
     <section id="ack">
