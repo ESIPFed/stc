@@ -1,8 +1,6 @@
 # Repository for the ESIP Semantic Technologies Committee
 
 <img src="http://www.esipfed.org/sites/default/files/esip-logo.png" align="right" width="300" />
-<a href="http://esipfed.org">![](http://badge.esipfed.org/testbed.svg?display=logo)</a> 
-<a href="http://esipfed.org">![](http://badge.esipfed.org/semanticweb.svg?display=logo)</a>
 
 **All Committee Working, Editors DRAFT's and Official documents are linked to from the [Website](https://esipfed.github.io/stc/)**
 
