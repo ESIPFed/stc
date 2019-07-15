@@ -1,0 +1,14 @@
+Thank you for the continued coordination of this Symposium. The following is the information that would help attendees prepare ahead of the Esri workshop:
+ 
+a.    Introduction Page - https://www.esri.com/en-us/arcgis/products/spatial-analytics-data-science/overview
+ 
+b.    Getting Access to ArcGIS
+                          i.    ArcGIS Pro
+ArcGIS Pro Trial - https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial
+ArcGIS Pro for Student Use - https://www.esri.com/en-us/arcgis/products/arcgis-for-student-use
+                        ii.    ArcGIS for Developers - https://developers.arcgis.com/
+ 
+c.    Optional Learn Lessons (can be taken following presentation) -
+                          i.    https://learn.arcgis.com/en/projects/downscale-climate-data-with-machine-learning/
+                        ii.    https://learn.arcgis.com/en/projects/determine-how-location-impacts-interest-rates/
+                       iii.    https://learn.arcgis.com/en/projects/use-deep-learning-to-assess-palm-tree-health/
