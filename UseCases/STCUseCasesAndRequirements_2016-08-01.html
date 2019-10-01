@@ -91,7 +91,7 @@
       var respecConfig = {
         specStatus: "ED",
         shortName: "esip-stc-ucr",
-        publishDate:  "2019-10-01",
+        publishDate:  "2016-08-01",
         previousPublishDate: "2016-08-01",
         previousMaturity: "NOTE",
         previousURI: "",
@@ -139,40 +139,60 @@
         
       }],
         noRecTrack: true,
-        overrideCopyright: "<p>Copyright © 2019 ESIP Federation ® ESIP Federation liability, trademark and document use rules apply.</p>"
+        overrideCopyright: "<p>Copyright © 2016 ESIP Federation ® ESIP Federation liability, trademark and document use rules apply.</p>"
       };
     </script>
   <body>
     <section id='abstract'>
       <p>
-        This document captures Use Cases and Requirements (UCR) for the storage, access, governance, long term preservation and availability of Semantic Web resources via the <a href="http://cor.esipfed.org">ESIP Community Ontology Repository</a> (COR). Artifacts to be stored within COR include ontologies, vocabularies, linked data resources, etc. which are of value to the Earth Science community. This document underpins the collaborative work of the 
-        <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">Semantic Technologies Committee (STC)</a> as operated by <a href="http://esipfed.org/">ESIP</a>. 
+        This document describes use cases that describe community Use Cases and Requirements (UCR) for the storage, access, governance, long term preservation and availability of Semantic Web resources via a Semantic Repository Implementation (SRI) potentially hosted by ESIP. Artifacts to be stored within the SRI include ontologies, vocabularies, linked data resources, etc. which are of value to the Earth Science community. This document underpins the collaborative work of the 
+        <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">Semantic Technologies Committee (STC)</a> as operated by the <a href="http://esipfed.org/">ESIP Federation</a>. 
       </p>
     </section>
     <section id="sotd">
-      <p>This UCR document represents a collaborative effort by ESIP semantic technologists (and fellow stakeholders) to understand what current and future COR expectations and requirements actually are. The STC aims to engage and collaborate with external parties, on behalf of ESIP, with regards to semantic technologies. It can therefore be assumed that due to ongoing collaborations this document will be revised and updated as necessary. It's state should be considered dynamic.</p>
+      <p>This UCR document represents the first unified, collaborative effort by ESIP semantic technologists (and fellow stakeholders) on what current and future SRI expectations and requirements actually are. This being said, best efforts have been made to fully recognize any previous similar efforts on this front. The STC aims to engage and collaborate with external parties, on behalf of ESIP, in regards to semantic technologies. It can therefore be assumed that due to ongoing collaborations this document will be revised and updated as necessary. It's state should be considered dynamic.</p>
     </section>
     <section>
       <h2>Introduction</h2>
       <p>
-        The mission of the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">STC</a>, is described in our <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies#Vision_of_the_Semantic_Technologies_Committee">Vision of the Semantic Technologies Committee</a>. We have produced several <a href="#UseCases">use cases</a> that aim to represent a voice for semantic technologists within the Earth Science community. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the STC.</p>
-      <p>The requirements described in this document serve a dual purp;ose, a) they have been used to evaluate software candidates e.g. COR and b) provide a roadmap for development planning.</p>
+        The mission of the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies">STC</a>, as described in our <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies#Vision_of_the_Semantic_Technologies_Committee">Vision of the Semantic Technologies Committee</a>, is to .... In particular:
+      </p>
+      <ol>
+        <li>promote research and development of semantic technologies in support of Earth science data discovery, dissemination, and analysis;</li>
+        <li>collaborate with ESIP members, working groups, clusters, and standing committees on semantic related topics;</li>
+        <li>foster sharing and reuse of ontologies and controlled vocabularies;</li>
+        <li>to provide a collaborative environment for the development of ontologies and ontology-based standards;</li>
+        <li>to maintain a long-term agenda and roadmap for evaluation of semantic technologies within ESIP; and</li>
+        <li>to collaborate with external agencies, on behalf of ESIP, in regards to semantic technologies.</li>
+      </ol>
+      <p>This document describes first steps of working towards these goals specifically focused on the SRI topic. Members of the working group and other stakeholders have come up with a number of <a href="#UseCases">use cases</a> that aim to represent a voice for semantic technologists within the Earth Science community. From these use cases, a number of <a href="#Requirements">requirements</a> for further work are derived. In this document, use cases, requirements and their relationships are described. Requirements and use cases are also related to the <a href="#Deliverables">deliverables</a> of the working group.</p>
+      <p>The requirements described in this document will be the basis for the evaluation of a suitable SRI for use by the ESIP Semantic Technologies community and hopefully further afield.</p>
     </section>
     <section id="Deliverables">
       <h2>Deliverables</h2>
       <p>The deliverables of STC are tangible outcomes aligned with the <a href="http://wiki.esipfed.org/index.php/Semantic_Technologies#2015-2020_Strategic_Plan_Goals">2015-2020 Strategic Plan Goals</a>. For convenience those deliverables are replicated in this chapter. The charter remains the authoritative source of the definition of deliverables.</p>
       <section id="UseCasesAndRequirements">
-        <h3>Development of COR Use Cases and Requirements</h3>
+        <h3>Development of Semantic Repository Implementation Use Cases and Requirements</h3>
         <p>A document setting out the range of community problems and issues that the STC is trying to solve (<i>this document</i>).</p>
+      </section>
+      <section id="SRI">
+        <h3>Evaluation of Semantic Repository Implementation Platform(s)</h3>
+        <p>The STC will undertake testing and evaluation to support ESIP's evaluation of semantic repository solutions in particular providing insight into:</p>
+        <ol>
+          <li>what current and future ESIP Semantic Technologies Committee (STC) community requirements (CR) are,</li>
+          <li>a comparative evaluation of different technology stacks/approaches; with the aim of assessing different solutions based upon how well they satisfy the Use Cases and Requirements as defined within this document, and</li>
+          <li>a business cost justification model that could be used to justify funding semantic web technology stacks within ESIP.</li>
+        </ol>
+        <p><b>All ESIP members (and anyone else with an interest in a SRI hosted at ESIP) are encouraged to contribute Use Cases and Requirements as described in this document</b>.</p>
       </section>
       <section id="SWEET">
         <h3>Development of a Community Governance Model for the Semantic Web for Earth and Environmental Terminology (SWEET) Vocabulary</h3>
         <p>The STC will work within NASA JPL to ensure transition of the SWEET Ontology from NASA JPL to ESIP where the STC will take community ownership of the resource. Within the scope of this deliverable the STC will address issues surrounding:</p>
         <ol>
-          <li>hosting SWEET in the ESIP COR,</li>
+          <li>hosting SWEET in the ESIP SRI,</li>
           <li>source code management including the definition of a community development and contribution process,</li>
           <li>selecting a suitable open source licensing for SWEET,</li>
-          <li>establishing a public community forum where stakeholders and interested individuals/groups can follow development,</li>
+          <li>establishing a public community mailing list where stakeholders and interested individuals/groups can follow development,</li>
           <li>community development including building the community for the long term sustainability of SWEET as the prima ontological resource within the earth and planatery sciences, and</li>
           <li>defining and documenting a release management procedure ensuring that new contributions and developments are made available through formal public open source releases.</li>
         </ol>
@@ -180,8 +200,14 @@
     </section>
     <section id="Methodology">
       <h2>Methodology</h2>
-      <p>In order to find out the requirements for the deliverables of the STC, use cases were collected. A use case is a story that describes challenges with respect to semantic data for existing or envisaged information systems. It does not need to adhere to certain standardised format. Use cases are primarily used as a source of requirements.</p>
-      <p>The STC has derived requirements from the collected use cases. A requirement is something that needs to be achieved by one or more deliverables and is phrased as a specification of functionality. Requirements can lead to one or more tests that can prove whether the requirement is met.</p>
+      <p>In order to find out the requirements for the deliverables of the Working Group, use cases were collected. For the purpose of the Working Group, a use case is a story that describes challenges with respect to spatial data on the Web for existing or envisaged information systems. It does not  need to adhere to certain standardised format. Use cases are primarily used as a source of requirements, but a use case could be revisited near the time the work of the Working Group will reach completion, to demonstrate that it is now possible to make the use case work.</p>
+      <p>The Working Group has derived requirements from the collected use cases. A requirement is something that needs to be achieved by one or more deliverables and is phrased as a specification of functionality. Requirements can lead to one or more tests that can prove whether the requirement is met.</p>
+      <p>Care was taken to only derive requirements that are considered to in scope for the further work of the Working Group. The scope of the Working Group is determined by the <a href="http://www.w3.org/2015/spatial/charter">charter</a>. To help keeping the requirements in scope, the following questions were applied:</p>
+      <ol>
+        <li>Is the requirement specifically about spatial data on the Web?</li>
+        <li>Is the use case including data published, reused, and accessible via Web technologies?</li>
+        <li>Has a use case a description that can lead to a testable requirement?</li>
+      </ol>
     </section>
     <section id="UseCases">
       <!--A HTML template for use cases can be found at the end of this section -->
@@ -356,30 +382,6 @@
         <p class="relatedRequirements"><a href="#AuthenticationSystem"></a>,<a href="#OntologyUpload"></a>,<a href="#ViewExisting"></a>,<a href="#EditExisting"></a>,<a href="#Versioning"></a></p>
       </section>
 
-      <section id="UploadLargeResource">
-        <h3>Upload Large Resources</h3>
-        <p class="contributor">Blake Regalia, NASA JPL</p>
-        <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
-        <div class="visible">
-          <p>Upon loading a large dataset (~320K triples) the user immediately realized some errors with the IRI prefixes in the dataset and regenerated/uploaded a few revisions in quick succession. These large datasets had an impact on system resources in that COR (or more specifcally the JVM running on one of the containers) ran our of memory.</p>
-        </div>
-        <p class="relatedDeliverables"></p>
-        <p class="relatedRequirements"><a href="#LargeUpload"></a></p>
-      </section>
-
-      <section id="UpdateMetadata">
-        <h3>Updating Ontology Metadata</h3>
-        <p class="contributor">Ruth Duerr, Ronin Institute</p>
-        <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
-        <div class="visible">
-          <p>After it was pointed out to me that I had a typo in the <code>dc:title</code> of the <a href="http://cor.esipfed.org/ont/~rduerr/ADO">Academic Disciplines Ontology</a> I tried to fix that issue by using the COR Edit new version -> Edit metadata facility. However, none of my metadata showed up, so could not be edited.</p>
-          <p>In particular there was no <code>dc:title</code> field in the list of available fields.</p>
-          <p>Attempts to update it using the <code>omv:name</code> field on the form failed to update the <code>dc:title</code> field which remained unchanged.</p>
-          <p>I think that if there is a term in the ontology that is a well-known term (like <code>dc:title</code>), that's what COR should display in its corresponding field. Why make people enter data twice. This also has the advantage of forcing agreement on standard ways of annotating ontologies! It forces and implicit "same as" on terms between two sets of annotations! Badly needed!!!</p>
-        </div>
-        <p class="relatedDeliverables"></p>
-        <p class="relatedRequirements"><a href="#EditExisting"></a>,<a href="#Versioning"></a></p>
-      </section>
       <!-- Template for use cases
         <section id="">
           <h3></h3>
@@ -399,46 +401,40 @@
       <p>This chapter lists the requirements for the deliverables of the STC, in alphabetical order.</p>
       <p class="note">In some requirements the expression 'recommended way' is used. This means that a single best way of doing something is sought. It does not say anything about the form this recommended way should have, or who should make the recommendation. A recommended way could be a formal or community recommendation or standard from an authoritative body like ESIP, OGC or W3C, but it could just as well be a more informal specification, as long as it is arguably the best way of doing something.</p>
       <section id="AuthenticationSystem">
-        <h3>COR shall provide a user authentication system</h3>
+        <h3>A User Authentication System</h3>
         <p>There is a user authentication system.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#UserAccess"></a></p>
       </section>
       <section id="OntologyUpload">
-        <h3>COR shall provide an ontology upload mechanism</h3>
-        <p>A graphical user interface and/or API that enables users to upload ontology files (in a variety of formats?)</p>
+        <h3>Ontology Upload Mechanism</h3>
+        <p>A UI and/or API that enables users to upload ontology files (in a variety of formats?)</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
       </section>
       <section id="ViewExisting">
-        <h3>COR shall provide a graphical user interface for viewing existing resources</h3>
-        <p>A graphical user interface that allows users to view an existing ontology.</p>
+        <h3>UI for Viewing Existing Resources</h3>
+        <p>A UI that allows users to view an existing ontology.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#OntologyBrowsing"></a></p>
       </section>
       <section id="EditExisting">
-        <h3>COR shall provide a graphical user interface for editing existing resources</h3>
-        <p>A graphical user interface that allows users to edit an existing ontology.</p>
+        <h3>UI for Editing Existing Resources</h3>
+        <p>A UI that allows users to edit an existing ontology.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
       </section>
       <section id="Versioning">
-        <h3>COR shall provide a version control management capability</h3>
+        <h3>Version Control</h3>
         <p>A version control system.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
       </section>
       <section id="Documentation">
-        <h3>API documentation shall be provided alongside COR</h3>
+        <h3>API Documentation</h3>
         <p>It is absolutely essential that developer-level API documentation is readily available alongside a SRI such that developers can easily develop client applications around the portal.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#SemanticSearchEngine"></a></p>
-      </section>
-      <section id="LargeUpload">
-        <h3>COR shall facilitate an upload mechanism for large resources</h3>
-        <p>COR shall provide a capability to upload large multi-GB resources.</p>
-        <p class="relatedDeliverables"><a href=""></a></p>
-        <p class="relatedUseCases"><a href="#UploadLargeResource"></a></p>
       </section>
       <!-- Template for requirements:
         <section id="">
