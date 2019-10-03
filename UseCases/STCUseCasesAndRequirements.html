@@ -380,6 +380,31 @@
         <p class="relatedDeliverables"></p>
         <p class="relatedRequirements"><a href="#EditExisting"></a>,<a href="#Versioning"></a></p>
       </section>
+      <section id="SemanticProcessWorkflow">
+        <h3>Use of Ontology Information in Data Processing Workflows </h3>
+        <p class="contributor">Tristan Wellman, Science Analytics and Synthesis, U.S. Geological Survey</p>
+        <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+        <div class="visible"></div>
+          <p>An ontology is created in the Darwin Core convention to follow protocol required by OBIS-USA and NOAA NCEI. The instantiation on ESIP COR provides a stable, publically-available endpoint used in the data processing workflow. As part of the workflow, basic ontology information and external supplimentary information describing each variable (term) are infused as metadata into NetCDF data files. A real-time feedback could be useful to ensure variable information and ontology information continuously align. As terms are added or modified, ontology versioning is needed to support historical data products which reference this resource.</p>
+          <p><b>User profile:</b> A user or institution that expects to evolve ontology records in an automated workflow and requires reproduceability of the resulting data products that use ontology information.</p>
+          <p><b>Scenario:</b> An institution in the Earth science community uses semantic vocabularies stored on public endpoints to describe scientific terms and variables in their data products. When these data products are created or revised ontologies should be updated in step. Versioning should be used to reproduce vocabulary information used in historical case studies.</p>
+          <p><b>Workflow:</b></p>
+          <ol>
+            <li>A code-driven analysis package is activated to process a collection of data files.</li>
+            <li>A series of quality control and processing functions are conducted in the processing workflow.</li>
+            <li>A processing function calls ESIP COR to match vocabulary terms defined within the cached ontology.</li>
+            <li>Additional variable (term) information, such as variable type, units, and alias name are retrieved to enhance default information.</li>
+            <li>Where vocabulary terms are new or vocabulary information has been revised or enhanced, the ESIP COR instantiation is updated to include the latest publically-available scientific information, potentially in real-time. </li>
+          </ol>
+          <p><b>Requirements implied by this use case:</b></p>
+          <ol>
+            <li>The ontology portal has automated versioning capabilities used to preserve ontology definitions in real time. Ontologies can be retrieved by version at user request.</li>
+            <li>The ontology portal allows authenticated users to update, create, or delete ontologies using a simple API, perhaps generating a modified temporary ontology while preserving the original parent ontology until a review has been completed.</li>
+          </ol>
+        </div>
+        <p class="relatedDeliverables"><a href="#UseCasesAndRequirements"></a></p>
+        <p class="relatedRequirements"><a href="#OntologyUpload"></a>,<a href="#Versioning"></a></p>
+      </section>
       <!-- Template for use cases
         <section id="">
           <h3></h3>
