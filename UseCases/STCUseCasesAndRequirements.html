@@ -130,9 +130,6 @@
         }, {
         key: "Changes",
           data: [{
-            value: "Change log",
-            href: "#ChangeHistory"
-          }, {
             value: "Commit history",
              href: "https://github.com/esipfed/stc/commits/gh-pages"
          }]
@@ -209,7 +206,7 @@
           </ol>
         </div>
         <p class="relatedDeliverables"><a href="#SWEET"></a></p>
-        <p class="relatedRequirements"><a href="#SpatialMetadata"></a>, </p>
+        <p class="relatedRequirements"></p>
       </section>
       <section id="OntologyBrowsing">
         <h3>Browsing a Portal for a Relevant Ontology</h3>
@@ -235,7 +232,7 @@
           </ol>
         </div>
         <p class="relatedDeliverables"><a href="#BestPractices"></a></p>
-        <p class="relatedRequirements"></p>
+        <p class="relatedRequirements"><a href="#ViewExisting"></a></p>
       </section>
       <section id="MatchingOntologyConcepts">
         <h3>Matching Concepts among Ontologies</h3>
@@ -358,7 +355,7 @@
 
       <section id="UploadLargeResource">
         <h3>Upload Large Resources</h3>
-        <p class="contributor">Blake Regalia, NASA JPL</p>
+        <p class="contributor">Blake Regalia (NASA JPL)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
           <p>Upon loading a large dataset (~320K triples) the user immediately realized some errors with the IRI prefixes in the dataset and regenerated/uploaded a few revisions in quick succession. These large datasets had an impact on system resources in that COR (or more specifcally the JVM running on one of the containers) ran our of memory.</p>
@@ -369,7 +366,7 @@
 
       <section id="UpdateMetadata">
         <h3>Updating Ontology Metadata</h3>
-        <p class="contributor">Ruth Duerr, Ronin Institute</p>
+        <p class="contributor">Ruth Duerr (Ronin Institute)</p>
         <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
         <div class="visible">
           <p>After it was pointed out to me that I had a typo in the <code>dc:title</code> of the <a href="http://cor.esipfed.org/ont/~rduerr/ADO">Academic Disciplines Ontology</a> I tried to fix that issue by using the COR Edit new version -> Edit metadata facility. However, none of my metadata showed up, so could not be edited.</p>
@@ -379,6 +376,34 @@
         </div>
         <p class="relatedDeliverables"></p>
         <p class="relatedRequirements"><a href="#EditExisting"></a>,<a href="#Versioning"></a></p>
+      </section>
+
+      <section id="DataWorkflow">
+        <h3>Use of Ontology Information in Data Processing Workflows </h3>
+        <p class="contributor">Tristan Wellman (Science Analytics and Synthesis, U.S. Geological Survey)</p>
+        <div class="expandOrCollapse" onclick="toggleVisibility(this)">&#9654; Full use case description (click to expand):</div>
+        <div class="visible">
+          <p>An ontology is created in the Darwin Core convention to follow protocol required by <a href="https://www.usgs.gov/core_science_systems/sas/obis-usa">OBIS-USA</a> and <a href="https://www.ncei.noaa.gov/">NOAA NCEI</a>. ESIP COR provides a stable, publically-available endpoint used in the data processing workflow. As part of the workflow, basic ontology information and external supplementary information describing each variable (term) are infused as metadata into NetCDF data files. Real-time feedback could be useful to ensure variable information and ontology information continuously align. As terms are added or modified, ontology versioning is needed to support historical data products which reference this resource.</p>
+          <p><b>User Profile:</b> A user or institution that expects to evolve ontology records in an automated workflow and requires reproducibility of the resulting data products that use ontology information.</p>
+          <p><b>Scenario:</b> An institution in the Earth science community uses semantic vocabularies stored on public endpoints to describe scientific terms and variables in their data products. When these data products are created or revised ontologies should be updated in step. Versioning should be used to reproduce vocabulary information used in historical case studies.</p>
+          <p><b>Workflow:</b>
+          	<ol>
+          		<li>A code-driven analysis package is activated to process a collection of data files.</li>
+          		<li>A series of quality control and processing functions are conducted in the processing workflow.</li>
+          		<li>A processing function calls ESIP COR to match vocabulary terms defined within the cached ontology.</li>
+          		<li>Additional variable (term) information, such as variable type, units, and alias name are retrieved to enhance default information.</li>
+          		<li>Where vocabulary terms are new or vocabulary information has been revised or enhanced, the ESIP COR instantiation is updated to include the latest publically-available scientific information, potentially in real-time.</li>
+          	</ol>
+          </p>
+          <p><b>Requirements implied by this use case:</b> 
+          	<ol>
+          		<li>The ontology portal has automated versioning capabilities used to preserve ontology definitions in real time. Ontologies can be retrieved by version at user request.</li>
+          		<li>The ontology portal allows authenticated users to update, create, or delete ontologies using a simple API, perhaps generating a modified temporary ontology while preserving the original parent ontology until a review has been completed.</li>
+          	</ol>
+          </p>
+        </div>
+        <p class="relatedDeliverables"></p>
+        <p class="relatedRequirements"><a href="#OntologyUpload"></a>,<a href="#Versioning"></a>,<a href="#EditExisting"></a>,<a href="#AuthenticationSystem"></a></p>
       </section>
       <!-- Template for use cases
         <section id="">
@@ -402,23 +427,23 @@
         <h3>COR shall provide a user authentication system</h3>
         <p>There is a user authentication system.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
-        <p class="relatedUseCases"><a href="#UserAccess"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a>,<a href="#DataWorkflow"></a></p>
       </section>
       <section id="OntologyUpload">
         <h3>COR shall provide an ontology upload mechanism</h3>
         <p>A graphical user interface and/or API that enables users to upload ontology files (in a variety of formats?)</p>
         <p class="relatedDeliverables"><a href=""></a></p>
-        <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
+        <p class="relatedUseCases"><a href="#ReleaseOntology"></a>,<a href="#DataWorkflow"></a></p>
       </section>
       <section id="ViewExisting">
-        <h3>COR shall provide a graphical user interface for viewing existing resources</h3>
-        <p>A graphical user interface that allows users to view an existing ontology.</p>
+        <h3>COR shall enable viewing of existing resources</h3>
+        <p>A graphical user interface or REST API that allows users to view an existing ontology.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
-        <p class="relatedUseCases"><a href="#OntologyBrowsing"></a></p>
+        <p class="relatedUseCases"><a href="#OntologyBrowsing"></a>,<a href="#ReleaseOntology"></a></p>
       </section>
       <section id="EditExisting">
-        <h3>COR shall provide a graphical user interface for editing existing resources</h3>
-        <p>A graphical user interface that allows users to edit an existing ontology.</p>
+        <h3>COR shall enable editing of existing resources</h3>
+        <p>A graphical user interface or REST API that allows users to edit an existing ontology.</p>
         <p class="relatedDeliverables"><a href=""></a></p>
         <p class="relatedUseCases"><a href="#ReleaseOntology"></a></p>
       </section>
