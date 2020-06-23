@@ -1,0 +1,14 @@
+Attribute	Value
+Processed Data Source	https://www.nature.com/articles/sdata201667
+Original Data Source	https://www.usgs.gov/centers/asc/science/tracking-data-yellow-billed-loons-gavia-adamsii?qt-science_center_objects=0#qt-science_center_objects
+Coupled Environmental Variables	https://www.nature.com/articles/sdata201667
+Processed Linked Data	https://github.com/TWellman/Dashboards/tree/master/Tableau/USGS_SpeciesMigration
+Study Summary	"These data were collected as part of a multi-year study to identify Yellow-billed Loon migration pathways and wintering areas. Yellow-billed Loons were marked with satellite transmitters from four breeding populations in Alaska and Canada, 2002-2017. Implanted internal platform terminal transmitters (PTT) were programmed to elicit signals for 8 hours followed by a quiescent period of 48 - 120 hours, depending on season and year of study. Location data were collected by the CLS Argos system. This study is participating in the Arctic Animal Movement Archive (AAMA). In addition, all raw and processed Argos data, decoded sensor data, comprehensive metadata, and various map visualization products associated with this Movebank Study are available at: https://doi.org/10.5066/P9UKHJ22"
+Citation	"Schmutz, J A., Uher-Koch, B.D., Douglas, D.C., 2019, Tracking data for Yellow-billed Loons (Gavia adamsii) (ver 1.0, November 2019): U.S. Geological Survey data release, https://doi.org/10.5066/P9UKHJ22 "
+sensor_type_ids	Argos Doppler Shift
+Species Common  Name	yellow Billed Loon
+Canonical Taxon	Gavia adamsii
+number_of_deployments	92
+number_of_individuals	92
+number_of_tags	70
+number_of_deployed_locations	135199
