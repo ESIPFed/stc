@@ -1,0 +1,1 @@
+This data folder contains any files that were altered to develop the Tableau dashboard. In cases where the data is preserved in the original repository and data is not altered links are provided to the data sources.

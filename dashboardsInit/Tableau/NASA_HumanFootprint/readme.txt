@@ -1,0 +1,1 @@
+This folder holds files relevant to examining human footprint using a Tableau dashboard. 
